@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-registro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-parametros {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+/* Estilos para las etiquetas */
+.container-parametros label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.container-parametros input[type="text"],
+.container-parametros input[type="number"],
+.container-parametros input[type="search"],
+.container-parametros textarea,
+.container-parametros select {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container-parametros input[type="text"]:focus,
+.container-parametros input[type="number"]:focus,
+.container-parametros textarea:focus,
+.container-parametros select:focus {
+    outline: none;
+    border-color: #007bff; /* Color de enfoque */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+.container-parametros button[type="submit"] {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #ffffff;
+    padding: 12px 20px;
+}
+
+.container-parametros,
+label:nth-child(3),
+label:nth-child(4),
+label:nth-child(5),
+label:nth-child(6),
+label:nth-child(7),textarea
+{
+    grid-column: 1 / 3;
+}
+
+.container-parametros,
+label:nth-child(8),
+label:nth-child(10){
+    grid-column: 1 / 2;
+}
+.container-parametros
+label:nth-child(8) input{
+    width: 150px;
+}
+.container-parametros
+label:nth-child(9) input{
+    width: 150px;
+}
+
+.container-parametros
+label:nth-child(10) input{
+    width: 150px;
+}
+
+.container-parametros textarea {
+    resize: none;
+    height: 50px;
+}
+
+
+.container-captura {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    /* align-self: center; */
+    display: grid;
+    grid-template-rows: min-content 1fr 1fr;
+}
+
+.container-captura .peso-capturado {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #333333;
+    margin-bottom: 10px;
+    justify-self: center;
+}
+.container-captura .peso-capturado  input[type="number"]{
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.container-captura button {
+    background: transparent;
+    display: inline-flex;
+    border: none;    
+}
+
+.pantalla-balanza {
+    background-color: #2f2b2b;
+    padding: 20px 10px 20px 0px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 330px;
+    justify-self: end;
+}
+
+.peso-mostrado {
+    background-color: #000;
+    text-align: right;
+}
+.peso-mostrado .peso {
+    color: #de2d0d;
+    font-size: 3.5em;
+}
+
+.peso-mostrado .unidad {
+    color: #cfd90e;
+    font-size: 2em;
+}
+
+.botones-balanza button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-captura .opciones {
+    align-self: center;
+}
+.container-captura .opciones ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container-captura .opciones li,button, a{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+}
+button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 10px;
+}
