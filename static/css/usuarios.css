@@ -1,0 +1,55 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Ejemplo de fuente moderna */
+}
+.container-usuario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1000px;
+    margin: auto;
+}
+
+.formulario-usuario {
+    grid-column: 1 / 2;
+}
+
+.tabla-usuario {
+    grid-column: 2 / 3;
+}
+
+
+.formulario-usuario {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+.formulario-usuario .campo {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.formulario-usuario label {
+    font-weight: 500;
+}
+.formulario-usuario button[type="submit"] {
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-usuario input[type="text"],
+.formulario-usuario input[type="email"],
+.formulario-usuario select {
+    padding: 10px;
+    border: 1px solid #ced4da; /* Borde sutil */
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+.formulario-usuario button[type="submit"]:hover {
+    background-color: #0069d9; /* Azul más oscuro al pasar el mouse */
+    transition: background-color 0.3s ease; /* Transición suave */
+}

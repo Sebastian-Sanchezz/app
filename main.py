@@ -8,6 +8,14 @@ app = Flask(__name__)
 def index():
     return render_template('usuario/index.html')
 
+@app.get("/admin/panel")
+def get_admin_panel():
+    return render_template('administrador/index.html')
+
+@app.get("/admin/usuarios")
+def get_admin_usuarios():
+    return render_template('administrador/usuarios.html')
+
 @app.get("/registro-saco")
 def get_registro_saco():
     return render_template('usuario/registro-saco.html')

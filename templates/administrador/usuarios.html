@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Granos - Usuarios </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/usuarios.css') }}">
+</head>
+<body>
+    <div class="container-usuario">
+        <form action="" method="post" class="formulario-usuario">
+            <div class="campo">
+                <label for="usuario">
+                    Codigo:
+                    <input type="text" name="usuario" id="usuario" maxlength="8" minlength="8" required>
+                </label>
+                <label for="dni">
+                    DNI:
+                    <input type="text" name="dni" id="dni" maxlength="8" minlength="8" required>
+                </label>
+            </div>
+            
+            <div class="campo">
+                <label for="nombre">
+                    Nombre:
+                    <input type="text" name="nombre" id="nombre" maxlength="250" required>
+                </label>
+                <label for="apellido">
+                    Apellido:
+                    <input type="text" name="apellido" id="apellido" maxlength="250" required>
+                </label>
+            </div>
+            
+            <div class="campo">
+                <label for="cargo">
+                    Cargo:
+                    <select name="cargo" id="cargo" required>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Usuario">Usuario</option>
+                    </select>
+                </label>
+                <label for="ccosto">
+                    Centro de Costo:
+                    <select name="ccosto" id="ccosto" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </label>
+                <label for="rol" required>
+                    Rol:
+                    <select name="rol" id="rol">
+                        <option value="Moderador">Moderador</option>
+                        <option value="Usuario">Usuario</option>
+                    </select>
+                </label>
+            </div>
+            
+           <button type="submit">Agregar</button>
+        </form>
+        <table class="tabla-usuario">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>DNI</th>
+                    <th>Cargo</th>
+                    <th>Centro de Costo</th>
+                    <th>Estado</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
